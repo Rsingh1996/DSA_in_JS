@@ -42,7 +42,7 @@ var removeElement = function (nums, val) {
 };
 console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)); // time complexity O(n)
 
-// proble 3 :
+// proble 3 : Length of Last Word
 /*
 Given a string s consisting of words and spaces, return the length of the last word in the string.
 A word is a maximal substring consisting of non-space characters only.
