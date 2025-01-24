@@ -41,3 +41,28 @@ var removeElement = function (nums, val) {
   return k;
 };
 console.log(removeElement([0, 1, 2, 2, 3, 0, 4, 2], 2)); // time complexity O(n)
+
+// proble 3 :
+/*
+Given a string s consisting of words and spaces, return the length of the last word in the string.
+A word is a maximal substring consisting of non-space characters only.
+Example
+Input: s = "   fly me   to   the moon  "
+Output: 4
+Explanation: The last word is "moon" with length 4.
+*/
+
+var lengthOfLastWord = function (s) {
+  let length = 0;
+  let foundWord = false;
+  for (let i = s.length - 1; i >= 0; i--) {
+    if (s[i] !== " ") {
+      length++;
+      foundWord = true;
+    } else if (foundWord) {
+      break;
+    }
+  }
+  return length;
+};
+console.log(lengthOfLastWord("   fly me   to   the moon  ")); // time complexity O(n)
