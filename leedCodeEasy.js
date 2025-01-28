@@ -68,7 +68,6 @@ var lengthOfLastWord = function (s) {
 console.log(lengthOfLastWord("   fly me   to   the moon  ")); // time complexity O(n)
 
 // Problem 4 : Plus One
-
 /*
 You are given a large integer represented as an integer array digits, where each digits[i] is the ith digit of the integer. 
 The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.
@@ -93,3 +92,32 @@ var plusOne = function (digits) {
   return digits;
 };
 console.log(plusOne([9, 9])); // time complexity O(n)
+
+// Problem 5 : Find the Index of the First Occurrence in a String
+/*
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+Example :
+Input: haystack = "sadbutsad", needle = "sad"
+Output: 0
+Explanation: "sad" occurs at index 0 and 6.
+The first occurrence is at index 0, so we return 0.
+*/
+
+var strStr = function (haystack, needle) {
+  let m = haystack.length;
+  let n = needle.length;
+  for (let i = 0; i <= m - n; i++) {
+    let matchFound = true;
+    for (let j = 0; j < n; j++) {
+      if (haystack[i + j] !== needle[j]) {
+        matchFound = false;
+        break;
+      }
+    }
+    if (matchFound) {
+      return i;
+    }
+  }
+  return -1;
+};
+console.log(strStr("butsdbutsad", "sad")); // time complexity O(n^2)
