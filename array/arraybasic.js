@@ -35,3 +35,15 @@ const insertElementInArray = (arr, element, index) => {
 };
 
 console.log(insertElementInArray([1, 2, 4, 5, 6], 3, 2)); // output = [1,2,3,4,5,6] // time complexity = O(n)
+
+// Delete an element from a specific index in an array
+
+const removeElementInArray = (arr, index) => {
+  for (let i = index; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+  }
+  arr.length = arr.length - 1;
+  return arr;
+};
+
+console.log(removeElementInArray([1, 2, 3, 4, 5], 2)); // output = [1,2,4,5] // time complexity = O(n)
