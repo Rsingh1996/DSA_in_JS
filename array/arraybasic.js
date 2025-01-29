@@ -1,5 +1,4 @@
 // Sum of all element in an Array
-
 const sumOfArrayElements = (arr) => {
   let sum = 0;
   for (let i = 0; i < arr.length; i++) {
@@ -11,7 +10,6 @@ const sumOfArrayElements = (arr) => {
 console.log(sumOfArrayElements([1, 2, 3, 4, 5])); // ouput = 15 // time complexity = O(n)
 
 // Reverse the Array
-
 const reverseOfArray = (arr) => {
   for (let i = 0; i < arr.length / 2; i++) {
     let temp = arr[i];
@@ -21,4 +19,19 @@ const reverseOfArray = (arr) => {
   return arr;
 };
 
-console.log(reverseOfArray([1, 2, 3, 4, 5]));
+console.log(reverseOfArray([1, 2, 3, 4, 5])); // output = [5,4,3,2,1] // time complexity = O(n)
+
+// Inster an element at a specific index in an array
+const insertElementInArray = (arr, element, index) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr[i] = arr[i];
+  }
+  newArr[index] = element;
+  for (let i = index; i < arr.length; i++) {
+    newArr[i + 1] = arr[i];
+  }
+  return newArr;
+};
+
+console.log(insertElementInArray([1, 2, 4, 5, 6], 3, 2)); // output = [1,2,3,4,5,6] // time complexity = O(n)
