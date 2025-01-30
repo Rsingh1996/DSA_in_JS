@@ -47,3 +47,20 @@ const removeElementInArray = (arr, index) => {
 };
 
 console.log(removeElementInArray([1, 2, 3, 4, 5], 2)); // output = [1,2,4,5] // time complexity = O(n)
+
+// Find the Maximum and Minimum Element
+const FindMaxAndMinInArray = (arr) => {
+  let max = arr[0];
+  let min = arr[0];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
+    }
+    if (arr[i] < min) {
+      min = arr[i];
+    }
+  }
+  return `max = ${max} and min = ${min} `;
+};
+
+console.log(FindMaxAndMinInArray([112, 99, 109, 40, 59, 76])); // output : max = 112 and min = 40 // time complexity = O(n)
