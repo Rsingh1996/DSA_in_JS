@@ -77,3 +77,14 @@ const isArraySorted = (arr) => {
 };
 
 console.log(isArraySorted([2, 6, 9, 15, 59, 76])); // output = Array is Sorted! // time complexity = O(n)
+
+//Given an element, find if it exists in the array.
+const isElementExist = (arr, element) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === element) {
+      return true;
+    }
+  }
+  return false;
+};
+console.log(isElementExist([2, 6, 9, 15, 59, 76], 59)); // output = true // time complexity = O(n)
