@@ -49,10 +49,10 @@ const removeElementInArray = (arr, index) => {
 console.log(removeElementInArray([1, 2, 3, 4, 5], 2)); // output = [1,2,4,5] // time complexity = O(n)
 
 // Find the Maximum and Minimum Element
-const FindMaxAndMinInArray = (arr) => {
+const findMaxAndMinInArray = (arr) => {
   let max = arr[0];
   let min = arr[0];
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 1; i < arr.length; i++) {
     if (arr[i] > max) {
       max = arr[i];
     }
@@ -63,4 +63,17 @@ const FindMaxAndMinInArray = (arr) => {
   return `max = ${max} and min = ${min} `;
 };
 
-console.log(FindMaxAndMinInArray([112, 99, 109, 40, 59, 76])); // output : max = 112 and min = 40 // time complexity = O(n)
+console.log(findMaxAndMinInArray([112, 99, 109, 40, 59, 76])); // output : max = 112 and min = 40 // time complexity = O(n)
+
+//Check if an array is sorted in non-decreasing order.
+const isArraySorted = (arr) => {
+  let sorted = true;
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < arr[i - 1]) {
+      return `Array is Unsorted!`;
+    }
+    return `Array is Sorted!`;
+  }
+};
+
+console.log(isArraySorted([2, 6, 9, 15, 59, 76])); // output = Array is Sorted! // time complexity = O(n)
