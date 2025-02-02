@@ -1,5 +1,5 @@
 // Move All Zeros to the End
-// Problem: Given an array, move all zeros to the end while maintaining the relative order of the non-zero elements.
+// Problem 1: Given an array, move all zeros to the end while maintaining the relative order of the non-zero elements.
 
 const moveAllZero = (arr) => {
   let j = 0;
@@ -32,7 +32,22 @@ const moveAllZeroOtimized = (arr) => {
 console.log(moveAllZeroOtimized([1, 4, 0, 7, 18, 0, 25, 0])); // Output: [1, 4, 7, 18, 25, 0, 0, 0] time complexity is O(n)
 
 // Find the "Kth" Largest/Smallest Element
-// Problem: Given an unsorted array, find the kth largest/smallest element.
+// Problem 2: Given an unsorted array, find the kth largest/smallest element.
+
+const findKthLargestAndSmallest = (arr, k) => {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] < arr[j]) {
+        let temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+      }
+    }
+  }
+  return `Largest = ${arr[k - 1]} and Smallest =${arr[arr.length - k]}`;
+};
+
+console.log(findKthLargestAndSmallest([25, 9, 12, 40, 10, 15, 46], 3)); // Output: Largest = 25 and Smallest =12 time complexity is O(n^2)
 
 // Array Rotation
 // Problem: Rotate an array by k positions to the right or left.

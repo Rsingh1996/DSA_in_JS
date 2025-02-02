@@ -67,14 +67,15 @@ console.log(findMaxAndMinInArray([112, 99, 109, 40, 59, 76])); // output : max =
 
 //Problem 6 : Check if an array is sorted in non-decreasing order.
 const isArraySorted = (arr) => {
-  let sorted = true;
   for (let i = 1; i < arr.length; i++) {
     if (arr[i] < arr[i - 1]) {
       return `Array is Unsorted!`;
     }
-    return `Array is Sorted!`;
   }
+  return `Array is Sorted!`;
 };
+
+console.log(isArraySorted([2, 6, 19, 15, 59, 76])); // output = Array is Sorted! // time complexity = O(n)
 
 console.log(isArraySorted([2, 6, 9, 15, 59, 76])); // output = Array is Sorted! // time complexity = O(n)
 
