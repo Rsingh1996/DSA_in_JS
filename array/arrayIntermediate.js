@@ -35,7 +35,7 @@ console.log(moveAllZeroOtimized([1, 4, 0, 7, 18, 0, 25, 0])); // Output: [1, 4, 
 // Problem 2: Given an unsorted array, find the kth largest/smallest element.
 
 const findKthLargestAndSmallest = (arr, k) => {
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < arr.length - 1; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] < arr[j]) {
         let temp = arr[i];
@@ -51,6 +51,28 @@ console.log(findKthLargestAndSmallest([25, 9, 12, 40, 10, 15, 46], 3)); // Outpu
 
 // Array Rotation
 // Problem: Rotate an array by k positions to the right or left.
+// Array Rotation
+// Problem: Rotate an array by k positions to the right or left.
+const arrayRightRotaion = (arr, k) => {
+  let temp = 0;
+  const arrayLength = arr.length;
+  let newArray = [];
+  k = k % arrayLength;
+
+  if (k === 0) {
+    return arr;
+  }
+  for (let i = k; i < arrayLength; i++) {
+    newArray[temp] = arr[i];
+    temp++;
+  }
+  for (let i = 0; i < k; i++) {
+    newArray[temp] = arr[i];
+    temp++;
+  }
+  return newArray;
+};
+console.log(arrayRightRotaion([1, 2, 3, 4, 5], 7)); // Output: [ 3, 4, 5, 1, 2 ] time complexity is O(n)
 
 // Merge Two Sorted Arrays
 // Problem: Merge two sorted arrays into a single sorted array.
