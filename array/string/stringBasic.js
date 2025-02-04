@@ -26,6 +26,21 @@ console.log(stringPalindrome("racecar")); // output : true // time complexity O(
 
 // Count the Vowels in a String
 // Count the number of vowels in a string.
+const vowelCount = (str) => {
+  let vowelCount = 0;
+  const vowel = "aeiou";
+  let lowerStr = str.toLowerCase();
+  for (let i = 0; i < lowerStr.length; i++) {
+    for (let j = 0; j < vowel.length; j++) {
+      if (lowerStr[i] === vowel[j]) {
+        vowelCount++;
+      }
+    }
+  }
+  return vowelCount;
+};
+
+console.log(vowelCount("Vowel String")); // output : 3 // time complexity O(n)
 
 // Remove Duplicates from a String
 // Remove duplicate characters from a string.
