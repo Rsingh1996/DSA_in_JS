@@ -13,6 +13,16 @@ console.log(reverseString("Java Script")); // output : tpircS avaJ // time compl
 
 // Check if String is Palindrome
 // Check if a given string reads the same forward and backward.
+const stringPalindrome = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(stringPalindrome("racecar")); // output : true // time complexity O(n)
 
 // Count the Vowels in a String
 // Count the number of vowels in a string.
