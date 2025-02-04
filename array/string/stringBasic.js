@@ -64,6 +64,24 @@ console.log(vowelCountOptimize("Vowe String")); // output : 3 // time complexity
 
 // Remove Duplicates from a String
 // Remove duplicate characters from a string.
+const removeDuplicate = (str) => {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    let duplicateFound = false;
+    for (let j = 0; j < str.length; j++) {
+      if (str[i] === newStr[j]) {
+        duplicateFound = true;
+        break;
+      }
+    }
+    if (!duplicateFound) {
+      newStr += str[i];
+    }
+  }
+  return newStr;
+};
+
+console.log(removeDuplicate("Banana")); // output : Ban // time complexity O(n^2)
 
 // String Length
 // Find the length of a string without using built-in functions.
