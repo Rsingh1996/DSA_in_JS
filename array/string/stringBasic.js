@@ -42,6 +42,26 @@ const vowelCount = (str) => {
 
 console.log(vowelCount("Vowel String")); // output : 3 // time complexity O(n)
 
+const vowelCountOptimize = (str) => {
+  let vowelCount = 0;
+  const vowelMap = {
+    a: true,
+    e: true,
+    i: true,
+    o: true,
+    u: true,
+  };
+  let lowerStr = str.toLowerCase();
+  for (let i = 0; i < lowerStr.length; i++) {
+    if (vowelMap[lowerStr[i]]) {
+      vowelCount++;
+    }
+  }
+  return vowelCount;
+};
+
+console.log(vowelCountOptimize("Vowe String")); // output : 3 // time complexity O(n)
+
 // Remove Duplicates from a String
 // Remove duplicate characters from a string.
 
