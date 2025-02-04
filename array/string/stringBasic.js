@@ -12,7 +12,7 @@ const reverseString = (str) => {
 console.log(reverseString("Java Script")); // output : tpircS avaJ // time complexity O(n)
 
 // Check if String is Palindrome
-// Check if a given string reads the same forward and backward.
+// Problem 2: Check if a given string reads the same forward and backward.
 const stringPalindrome = (str) => {
   for (let i = 0; i < str.length; i++) {
     if (str[i] !== str[str.length - 1 - i]) {
@@ -25,7 +25,7 @@ const stringPalindrome = (str) => {
 console.log(stringPalindrome("racecar")); // output : true // time complexity O(n)
 
 // Count the Vowels in a String
-// Count the number of vowels in a string.
+// Problem 3: Count the number of vowels in a string.
 const vowelCount = (str) => {
   let vowelCount = 0;
   const vowel = "aeiou";
@@ -63,7 +63,7 @@ const vowelCountOptimize = (str) => {
 console.log(vowelCountOptimize("Vowe String")); // output : 3 // time complexity O(n)
 
 // Remove Duplicates from a String
-// Remove duplicate characters from a string.
+// Problem 4: Remove duplicate characters from a string.
 const removeDuplicate = (str) => {
   let newStr = "";
   for (let i = 0; i < str.length; i++) {
@@ -82,6 +82,20 @@ const removeDuplicate = (str) => {
 };
 
 console.log(removeDuplicate("Banana")); // output : Ban // time complexity O(n^2)
+
+const removeDuplicateOptimzed = (str) => {
+  let newStr = "";
+  let seen = {};
+  for (let i = 0; i < str.length; i++) {
+    if (!seen[str[i]]) {
+      newStr += str[i];
+      seen[str[i]] = true;
+    }
+  }
+  return newStr;
+};
+
+console.log(removeDuplicateOptimzed("Banana")); // output : Ban // time complexity O(n)
 
 // String Length
 // Find the length of a string without using built-in functions.
