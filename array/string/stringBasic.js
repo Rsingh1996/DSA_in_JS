@@ -99,6 +99,15 @@ console.log(removeDuplicateOptimzed("Banana")); // output : Ban // time complexi
 
 // String Length
 // Find the length of a string without using built-in functions.
+const lengthOfString = (str) => {
+  let i = 0;
+  while (str[i]) {
+    i++;
+  }
+  return i;
+};
+
+console.log(lengthOfString("Banana")); // output : 6 // time complexity O(n)
 
 // Find the First Occurrence of a Character
 // Given a string and a character, find the first occurrence of the character in the string.
