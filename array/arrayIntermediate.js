@@ -103,6 +103,8 @@ const mergeOfTwoArray = (arr1, arr2) => {
 console.log(mergeOfTwoArray([1, 2, 3, 4, 5, 9], [2, 6, 7, 10, 12])); // Output: [1, 2, 2, 3, 4, 5, 6, 7, 9, 10, 12] time complexity is O(n + m)
 
 // Find Duplicates in an Array
+// Problem: Find all duplicates in an array.
+
 // Problem: Find all duplicates in an array without using extra space.
 
 // Array Subset Sum
