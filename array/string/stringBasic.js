@@ -110,7 +110,7 @@ const lengthOfString = (str) => {
 console.log(lengthOfString("Banana")); // output : 6 // time complexity O(n)
 
 // Find the First Occurrence of a Character
-// Given a string and a character, find the first occurrence of the character in the string.
+// Problem 6: Given a string and a character, find the first occurrence of the character in the string.
 const firstOccurrence = (str, char) => {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === char) {
@@ -123,13 +123,23 @@ const firstOccurrence = (str, char) => {
 console.log(firstOccurrence("Banana", "n")); // output : 2 // time complexity O(n)
 
 // Find the Last Occurrence of a Character
-// Given a string and a character, find the last occurrence of the character in the string.
+// Problem 7: Given a string and a character, find the last occurrence of the character in the string.
+const lastOccurrence = (str, char) => {
+  for (let i = str.length - 1; i >= 0; i--) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+console.log(lastOccurrence("Banana", "a"));
 
 // Check if a String Contains a Substring
-// Given a string and a substring, check if the substring exists in the string.
+// Problem 8: Given a string and a substring, check if the substring exists in the string.
 
 // Count the Number of Substring Occurrences
-// Count how many times a given substring appears in the string.
+// Problem 9: Count how many times a given substring appears in the string.
 
 // Pattern Matching (Naive Approach)
-// Implement a simple string matching algorithm (i.e., brute-force approach).
+// Problem 10: Implement a simple string matching algorithm (i.e., brute-force approach).
