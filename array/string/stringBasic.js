@@ -133,7 +133,7 @@ const lastOccurrence = (str, char) => {
   return -1;
 };
 
-console.log(lastOccurrence("Banana", "a"));
+console.log(lastOccurrence("Banana", "a")); // output : 5 // time complexity O(n)
 
 // Check if a String Contains a Substring
 // Problem 8: Given a string and a substring, check if the substring exists in the string.
@@ -153,10 +153,28 @@ const isSubstringExist = (str, substr) => {
   return false;
 };
 
-console.log(isSubstringExist("badbutbad", "but"));
+console.log(isSubstringExist("badbutbad", "but")); // output : true // time complexity O(n * m)
 
 // Count the Number of Substring Occurrences
 // Problem 9: Count how many times a given substring appears in the string.
+const numberOfSubstrOccurance = (str, substr) => {
+  let substrOccurance = 0;
+  for (let i = 0; i <= str.length - substr.length; i++) {
+    let matchFound = true;
+    for (let j = 0; j < substr.length; j++) {
+      if (str[i + j] !== substr[j]) {
+        matchFound = false;
+        break;
+      }
+    }
+    if (matchFound) {
+      substrOccurance++;
+    }
+  }
+  return substrOccurance;
+};
+
+console.log(numberOfSubstrOccurance("hello world hello", "hello")); // output : 2 // time complexity O(n * m)
 
 // Pattern Matching (Naive Approach)
 // Problem 10: Implement a simple string matching algorithm (i.e., brute-force approach).
