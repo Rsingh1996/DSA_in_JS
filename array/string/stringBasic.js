@@ -137,6 +137,23 @@ console.log(lastOccurrence("Banana", "a"));
 
 // Check if a String Contains a Substring
 // Problem 8: Given a string and a substring, check if the substring exists in the string.
+const isSubstringExist = (str, substr) => {
+  for (let i = 0; i < str.length - substr.length; i++) {
+    let matchFound = true;
+    for (let j = 0; j < substr.length; j++) {
+      if (str[i + j] !== substr[j]) {
+        matchFound = false;
+        break;
+      }
+    }
+    if (matchFound) {
+      return true;
+    }
+  }
+  return false;
+};
+
+console.log(isSubstringExist("badbutbad", "but"));
 
 // Count the Number of Substring Occurrences
 // Problem 9: Count how many times a given substring appears in the string.
