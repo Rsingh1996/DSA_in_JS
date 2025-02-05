@@ -98,7 +98,7 @@ const removeDuplicateOptimzed = (str) => {
 console.log(removeDuplicateOptimzed("Banana")); // output : Ban // time complexity O(n)
 
 // String Length
-// Find the length of a string without using built-in functions.
+// Problem 5: Find the length of a string without using built-in functions.
 const lengthOfString = (str) => {
   let i = 0;
   while (str[i]) {
@@ -111,6 +111,16 @@ console.log(lengthOfString("Banana")); // output : 6 // time complexity O(n)
 
 // Find the First Occurrence of a Character
 // Given a string and a character, find the first occurrence of the character in the string.
+const firstOccurrence = (str, char) => {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+console.log(firstOccurrence("Banana", "n")); // output : 2 // time complexity O(n)
 
 // Find the Last Occurrence of a Character
 // Given a string and a character, find the last occurrence of the character in the string.
