@@ -178,3 +178,26 @@ console.log(numberOfSubstrOccurance("hello world hello", "hello")); // output : 
 
 // Pattern Matching (Naive Approach)
 // Problem 10: Implement a simple string matching algorithm (i.e., brute-force approach).
+const stringMatching = (str, pattern) => {
+  let matchFoundArray = [];
+  let z = 0;
+  for (let i = 0; i <= str.length - pattern.length; i++) {
+    let matchFound = true;
+    for (let j = 0; j < pattern.length; j++) {
+      if (str[i + j] !== pattern[j]) {
+        matchFound = false;
+        break;
+      }
+    }
+    if (matchFound) {
+      matchFoundArray[z] = i;
+      z++;
+    }
+  }
+  if (matchFoundArray.length) {
+    return matchFoundArray;
+  }
+  return -1;
+};
+
+console.log(stringMatching("ABC ABCDAB ABCDABCDABDE", "ABC")); // output : [ 0, 4, 11, 15 ] // time complexity O(n * m)
