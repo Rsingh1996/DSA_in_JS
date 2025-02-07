@@ -105,6 +105,37 @@ console.log(mergeOfTwoArray([1, 2, 3, 4, 5, 9], [2, 6, 7, 10, 12])); // Output: 
 // Find Duplicates in an Array
 // Problem: Find all duplicates in an array.
 
+const findDuplicate = (arr) => {
+  let duplicateValueArray = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j] && !duplicateValueArray.includes(arr[i])) {
+        duplicateValueArray.push(arr[i]);
+      }
+    }
+  }
+  return duplicateValueArray;
+};
+
+console.log(findDuplicate([3, 2, 3, 4, 3, 4, 8, 9, 2, 3, 2])); // Output: [ 3, 2, 4 ] time complexity is O(n^2)
+
+const findDuplicateOptimized = (arr) => {
+  let duplicateValueArray = [];
+  let seen = {};
+  let duplicatesAdded = new Set();
+  for (let i = 0; i < arr.length; i++) {
+    if (seen[arr[i]] === true && !duplicatesAdded.has(arr[i])) {
+      duplicateValueArray.push(arr[i]);
+      duplicatesAdded.add(arr[i]);
+    } else {
+      seen[arr[i]] = true;
+    }
+  }
+  return duplicateValueArray;
+};
+
+console.log(findDuplicateOptimized([3, 2, 3, 4, 3, 4, 8, 9, 2, 3, 2])); // Output: [ 3, 2, 4 ] time complexity is O(n)
+
 // Problem: Find all duplicates in an array without using extra space.
 
 // Array Subset Sum
