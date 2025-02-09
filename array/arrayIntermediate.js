@@ -50,7 +50,7 @@ const findKthLargestAndSmallest = (arr, k) => {
 console.log(findKthLargestAndSmallest([25, 9, 12, 40, 10, 15, 46], 3)); // Output: Largest = 25 and Smallest =12 time complexity is O(n^2)
 
 // Array Rotation
-// Problem: Rotate an array by k positions to the right or left.
+// Problem 3: Rotate an array by k positions to the right or left.
 
 const arrayRightRotaion = (arr, k) => {
   let temp = 0;
@@ -74,7 +74,7 @@ const arrayRightRotaion = (arr, k) => {
 console.log(arrayRightRotaion([1, 2, 3, 4, 5], 7)); // Output: [ 3, 4, 5, 1, 2 ] time complexity is O(n)
 
 // Merge Two Sorted Arrays
-// Problem: Merge two sorted arrays into a single sorted array.
+// Problem 4: Merge two sorted arrays into a single sorted array.
 
 const mergeOfTwoArray = (arr1, arr2) => {
   let mergedArray = [];
@@ -103,7 +103,7 @@ const mergeOfTwoArray = (arr1, arr2) => {
 console.log(mergeOfTwoArray([1, 2, 3, 4, 5, 9], [2, 6, 7, 10, 12])); // Output: [1, 2, 2, 3, 4, 5, 6, 7, 9, 10, 12] time complexity is O(n + m)
 
 // Find Duplicates in an Array
-// Problem: Find all duplicates in an array.
+// Problem 5: Find all duplicates in an array.
 
 const findDuplicate = (arr) => {
   let duplicateValueArray = [];

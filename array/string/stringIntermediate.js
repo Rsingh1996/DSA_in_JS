@@ -1,7 +1,23 @@
 // These problems involve more complex string operations and can be solved using techniques like sorting, hashing, and two-pointer approaches.
 
 // Run-Length Encoding
-// Implement run-length encoding for a given string (e.g., "aabbbcccc" → "a2b3c4").
+// Problem 1: Implement run-length encoding for a given string (e.g., "aabbbcccc" → "a2b3c4").
+
+const runLengthEncoding = (str) => {
+  let encodedString = "";
+  let char = str[0];
+  let charCount = 1;
+  for (let i = 1; i < str.length; i++) {
+    if (str[i] !== char) {
+      encodedString += char + charCount;
+      char = str[i];
+      charCount = 1;
+    } else charCount++;
+  }
+  encodedString += char + charCount;
+  return encodedString;
+};
+console.log(runLengthEncoding("aabbbcccc")); // output : a2b4c5 // time complexity O(n)
 
 // String Compression
 // Given a string, compress it by replacing repeated characters with the character followed by the count of the repetition.
