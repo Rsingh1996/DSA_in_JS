@@ -24,6 +24,36 @@ console.log(runLengthEncoding("aabbbcccc")); // output : a2b4c5 // time complexi
 
 // String Decompression
 // Given a compressed string (e.g., "a2b3c4"), decompress it back to the original string.
+const stringDecompression = (str) => {
+  let decodedString = "";
+  let char = "";
+  let charCount = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] >= "0" && str[i] <= "9") {
+      charCount = charCount * 10 + (str[i] - "0");
+    } else {
+      if (char !== "") {
+        let count = charCount;
+        while (count > 0) {
+          decodedString += char;
+          count--;
+        }
+      }
+      char = str[i];
+      charCount = 0;
+    }
+  }
+  if (char !== "") {
+    let count = charCount;
+    while (count > 0) {
+      decodedString += char;
+      count--;
+    }
+  }
+
+  return decodedString;
+};
+console.log(stringDecompression("a2b10c4")); // output : aabbbbbbbbbbcccc // time complexity O(n + m)
 
 // Check if Two Strings are Anagrams
 // Given two strings, check if they are anagrams of each other.
