@@ -23,7 +23,7 @@ console.log(runLengthEncoding("aabbbcccc")); // output : a2b4c5 // time complexi
 // Given a string, compress it by replacing repeated characters with the character followed by the count of the repetition.
 
 // String Decompression
-// Given a compressed string (e.g., "a2b3c4"), decompress it back to the original string.
+// Problem 2: Given a compressed string (e.g., "a2b3c4"), decompress it back to the original string.
 const stringDecompression = (str) => {
   let decodedString = "";
   let char = "";
@@ -56,7 +56,59 @@ const stringDecompression = (str) => {
 console.log(stringDecompression("a2b10c4")); // output : aabbbbbbbbbbcccc // time complexity O(n + m)
 
 // Check if Two Strings are Anagrams
+// Problem 3: Given two strings, check if they are anagrams of each other.
+
 // Given two strings, check if they are anagrams of each other.
+const isAnagrams = (str1, str2) => {
+  //checking if length of two strings are same
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  // let sortedString1 = str1.split('').sort().join('');
+  // let sortedString2 = str2.split('').sort().join('');
+
+  // Converting strings into arrays
+  let stringArray1 = [];
+  let stringArray2 = [];
+  for (let i = 0; i < str1.length; i++) {
+    stringArray1[i] = str1[i];
+  }
+  for (let i = 0; i < str2.length; i++) {
+    stringArray2[i] = str2[i];
+  }
+  // sorting arrays into alphabetically order
+  for (let i = 0; i < stringArray1.length; i++) {
+    for (let j = 0; j < stringArray1.length - 1 - i; j++) {
+      if (stringArray1[j] > stringArray1[j + 1]) {
+        let temp = stringArray1[j];
+        stringArray1[j] = stringArray1[j + 1];
+        stringArray1[j + 1] = temp;
+      }
+    }
+  }
+  for (let i = 0; i < stringArray2.length; i++) {
+    for (let j = 0; j < stringArray2.length - 1 - i; j++) {
+      if (stringArray2[j] > stringArray2[j + 1]) {
+        let temp = stringArray2[j];
+        stringArray2[j] = stringArray2[j + 1];
+        stringArray2[j + 1] = temp;
+      }
+    }
+  }
+  // Merging the sorted arrays back into strings
+  let sortedString1 = "";
+  let sortedString2 = "";
+
+  for (let i = 0; i < stringArray1.length; i++) {
+    sortedString1 += stringArray1[i];
+  }
+  for (let i = 0; i < stringArray2.length; i++) {
+    sortedString2 += stringArray2[i];
+  }
+  // checking if strings are matching
+  return sortedString1 === sortedString2;
+};
+console.log(isAnagrams("listen", "silent"));
 
 // Find All Anagrams in a String
 // Given a string and a pattern, find all the starting indices of the pattern’s anagrams in the string.
