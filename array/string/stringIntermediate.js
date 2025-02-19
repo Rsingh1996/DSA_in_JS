@@ -57,8 +57,6 @@ console.log(stringDecompression("a2b10c4")); // output : aabbbbbbbbbbcccc // tim
 
 // Check if Two Strings are Anagrams
 // Problem 3: Given two strings, check if they are anagrams of each other.
-
-// Given two strings, check if they are anagrams of each other.
 const isAnagrams = (str1, str2) => {
   //checking if length of two strings are same
   if (str1.length !== str2.length) {

@@ -136,6 +136,35 @@ const findDuplicateOptimized = (arr) => {
 
 console.log(findDuplicateOptimized([3, 2, 3, 4, 3, 4, 8, 9, 2, 3, 2])); // Output: [ 3, 2, 4 ] time complexity is O(n)
 
+// Find the Majority Element
+// Problem 6: Find the element that appears more than n/2 times in an array (if exists).
+const findMajorityElement = (arr) => {
+  if (arr.length === 0) return -1;
+  let mejorityElement = arr[0];
+  let count = 1;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === mejorityElement) {
+      count++;
+    } else count--;
+    if (count === 0) {
+      mejorityElement = arr[i];
+    }
+  }
+  let finalCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === mejorityElement) {
+      finalCount++;
+    }
+  }
+
+  if (finalCount > arr.length / 2) {
+    return mejorityElement;
+  } else return -1;
+};
+
+console.log(findMajorityElement([2, 2, 1, 1, 1, 2, 2])); // Output: 2 time complexity is O(n)
+
 // Problem: Find all duplicates in an array without using extra space.
 
 // Array Subset Sum
@@ -143,6 +172,3 @@ console.log(findDuplicateOptimized([3, 2, 3, 4, 3, 4, 8, 9, 2, 3, 2])); // Outpu
 
 // Find the Union and Intersection of Two Arrays
 // Problem: Find the union and intersection of two arrays without duplicates.
-
-// Find the Majority Element
-// Problem: Find the element that appears more than n/2 times in an array (if exists).
