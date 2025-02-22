@@ -42,6 +42,18 @@ class LinkedList {
     }
     return count;
   }
+
+  search(element) {
+    let current = this.head;
+    while (current) {
+      if (current.data === element) {
+        return `${current.data} exists`;
+      } else {
+        current = current.next;
+      }
+    }
+    return `${element} not found`;
+  }
 }
 const list = new Linklist();
 list.append(10);
@@ -59,7 +71,7 @@ list.print(); // output 10 20 30
 
 //Search an Element in Linked List
 //Search for a value in the linked list.
-
+console.log(list.search(50)); // output - 50 not found
 //Find the Length of the Linked List
 //Count the number of nodes in the linked list.
 console.log("Number of nodes:", list.nodeCount()); // output - Number of nodes: 3
