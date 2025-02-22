@@ -54,24 +54,44 @@ class LinkedList {
     }
     return `${element} not found`;
   }
+  delete(value) {
+    if (!this.head) {
+      console.log("The list is empty.");
+      return;
+    }
+    if (this.head.data == value) {
+      this.head = this.head.next;
+    }
+    let current = this.head;
+    while (current.next) {
+      if (current.next.data === value) {
+        current.next = current.next.next;
+        return;
+      }
+      current = current.next;
+    }
+    console.log(`${value} not found in the list.`);
+  }
 }
 const list = new Linklist();
 list.append(10);
 list.append(20);
 list.append(30);
+list.append(40);
 //Traverse and print all elements in the linked list.
 console.log("Linked List: ");
-list.print(); // output 10 20 30
+list.print(); // output 10~>20~>30~>40~>
+//Search for a value in the linked list.
+console.log(list.search(50)); // output - 50 not found
+
+//Count the number of nodes in the linked list.
+console.log("Number of nodes:", list.nodeCount()); // output - Number of nodes: 3
 
 //Insertion in Linked List
 //Insert at the beginning, end, or a specific position.
 
-//Deletion in Linked List
 //Delete the first node, last node, or node at a specific position.
-
-//Search an Element in Linked List
-//Search for a value in the linked list.
-console.log(list.search(50)); // output - 50 not found
-//Find the Length of the Linked List
-//Count the number of nodes in the linked list.
-console.log("Number of nodes:", list.nodeCount()); // output - Number of nodes: 3
+list.delete(10); // first node
+list.print(); // output 20~>30~>40~>
+list.delete(40); // last node
+list.print(); // output 10~>20~>30~>
