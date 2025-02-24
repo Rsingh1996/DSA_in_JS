@@ -72,6 +72,33 @@ class LinkedList {
     }
     console.log(`${value} not found in the list.`);
   }
+  insertAtBeginning(value) {
+    const newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+  }
+  insertAtEnd(value) {
+    const newNode = new Node(value);
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+    let current = this.head;
+    while (current.next) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+  insertAtPosition(value, position) {
+    const newNode = new Node(value);
+    if (position === 0) {
+      newNode.next = this.head;
+      this.head = newNode;
+      return;
+    }
+
+    let current = this.head;
+  }
 }
 const list = new Linklist();
 list.append(10);
@@ -89,7 +116,9 @@ console.log("Number of nodes:", list.nodeCount()); // output - Number of nodes: 
 
 //Insertion in Linked List
 //Insert at the beginning, end, or a specific position.
-
+list.insertAtBeginning(50);
+list.insertAtEnd(70);
+list.insertAtPosition(100, 0);
 //Delete the first node, last node, or node at a specific position.
 list.delete(10); // first node
 list.print(); // output 20~>30~>40~>
