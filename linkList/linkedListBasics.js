@@ -98,9 +98,20 @@ class LinkedList {
     }
 
     let current = this.head;
+    let currentPosition = 0;
+    while (currentPosition !== null && currentPosition < position - 1) {
+      current = current.next;
+      currentPosition++;
+    }
+    if (currentPosition === null) {
+      console.log(`Postion is out of bound`);
+      return;
+    }
+    newNode.next = current.next;
+    current.next = newNode;
   }
 }
-const list = new Linklist();
+const list = new LinkedList();
 list.append(10);
 list.append(20);
 list.append(30);
@@ -119,6 +130,8 @@ console.log("Number of nodes:", list.nodeCount()); // output - Number of nodes: 
 list.insertAtBeginning(50);
 list.insertAtEnd(70);
 list.insertAtPosition(100, 0);
+list.insertAtPosition(150, 3);
+list.print();
 //Delete the first node, last node, or node at a specific position.
 list.delete(10); // first node
 list.print(); // output 20~>30~>40~>
