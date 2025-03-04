@@ -1,4 +1,4 @@
-// Gievn a number 'n', find the first 'n' elements of the fabonacci sequence.
+// Problem 1: Gievn a number 'n', find the first 'n' elements of the fabonacci sequence.
 const fibonacci = (n) => {
     if(n < 2){
         return `Invalid value to get fabinacci sequence`;
@@ -14,3 +14,16 @@ const fibonacci = (n) => {
 }
 
 console.log(fibonacci(7)); // output - [0,1,1,2,3,5,8] // Big-O = O(n)
+
+// Problem 2: Gievn an integer 'n', find the factorial of that integer.
+const factorial = (n) => {
+    if(n < 0){
+        return `Required non-negative integer to get factorial`
+    }
+    let result = 1;
+    for(let i = n; i > 1; i--){
+        result = result*i;
+    }
+    return result;
+}
+console.log(factorial(5)); // output = 120 // Big-O = O(n)
