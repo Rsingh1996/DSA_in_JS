@@ -42,3 +42,17 @@ const isPrime = (n) => {
 }
 console.log(isPrime(9)); // output = false // Big-O = O(n)
 console.log(isPrime(11)); // output = true // Big-O = O(n)
+
+const isPrimeOptimized = (n) => {
+    if(n <2 ){
+        return false;
+    }
+    for(let i = 2; i <= Math.sqrt(n); i++){
+        if(n%i === 0){
+            return false;
+        }
+    }
+    return true;
+}
+console.log(isPrimeOptimized(27)); // output = false // Big-O = O(sqrt(n))
+console.log(isPrimeOptimized(47)); // output = true // Big-O = O(sqrt(n))
