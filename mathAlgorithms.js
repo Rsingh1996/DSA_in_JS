@@ -28,7 +28,7 @@ const factorial = (n) => {
 }
 console.log(factorial(5)); // output = 120 // Big-O = O(n)
 
-// Problem 2: Gievn an natural number 'n', determine if the number is prime of not.
+// Problem 3: Gievn an natural number 'n', determine if the number is prime of not.
 const isPrime = (n) => {
     if(n <2 ){
         return false;
@@ -56,3 +56,20 @@ const isPrimeOptimized = (n) => {
 }
 console.log(isPrimeOptimized(27)); // output = false // Big-O = O(sqrt(n))
 console.log(isPrimeOptimized(47)); // output = true // Big-O = O(sqrt(n))
+
+// Problem 4: Gievn a positive integer 'n', determine if the number is power of 2 or not.
+
+const isPowerOfTwo = (n) => {
+    if (n < 1) {
+        return false;
+    }
+    while (n > 1) {
+        if (n % 2 !== 0) {
+            return false;
+        }
+        n = n / 2;
+    }
+    return true;
+}
+console.log(isPowerOfTwo(9)); // output = false // Big-O = O(logn)
+console.log(isPowerOfTwo(16)); // output = true // Big-O = O(logn)
