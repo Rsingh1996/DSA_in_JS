@@ -91,3 +91,12 @@ const recursiveFibonacci = (n) => {
 }
 
 console.log(recursiveFibonacci(6)); // output - 8 // Big-O = O(2^n)
+
+const recursiveFactorial = (n) => {
+    
+    if(n === 0) {
+        return 1;
+    }
+    return n*recursiveFactorial(n-1);
+}
+console.log(recursiveFactorial(4)); // output - 24 // Big-O = O(n)
