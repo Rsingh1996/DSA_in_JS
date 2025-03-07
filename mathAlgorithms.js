@@ -1,4 +1,4 @@
-// Problem 1: Gievn a number 'n', find the first 'n' elements of the fabonacci sequence.
+// Problem 1: Gievn a number 'n', find the first 'n' elements of the fibonacci sequence.
 const fibonacci = (n) => {
     if(n < 2){
         return `Invalid value to get fabinacci sequence`;
@@ -82,3 +82,12 @@ const isPowerOfTwoBitWise = (n) => {
 }
 console.log(isPowerOfTwoBitWise(9)); // output = false // Big-O = O(1)
 console.log(isPowerOfTwoBitWise(64)); // output = true // Big-O = O(1)
+
+const recursiveFibonacci = (n) => {
+    if(n < 2) {
+        return n;
+    }
+    return recursiveFibonacci(n-1)+recursiveFibonacci(n-2);
+}
+
+console.log(recursiveFibonacci(6)); // output - 8 // Big-O = O(2^n)
