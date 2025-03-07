@@ -73,3 +73,12 @@ const isPowerOfTwo = (n) => {
 }
 console.log(isPowerOfTwo(9)); // output = false // Big-O = O(logn)
 console.log(isPowerOfTwo(16)); // output = true // Big-O = O(logn)
+
+const isPowerOfTwoBitWise = (n) => {
+    if (n < 1) {
+        return false;
+    }
+    return (n & (n-1)) === 0;
+}
+console.log(isPowerOfTwoBitWise(9)); // output = false // Big-O = O(1)
+console.log(isPowerOfTwoBitWise(64)); // output = true // Big-O = O(1)
