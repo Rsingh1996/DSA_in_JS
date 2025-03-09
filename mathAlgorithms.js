@@ -83,6 +83,7 @@ const isPowerOfTwoBitWise = (n) => {
 console.log(isPowerOfTwoBitWise(9)); // output = false // Big-O = O(1)
 console.log(isPowerOfTwoBitWise(64)); // output = true // Big-O = O(1)
 
+// Problem 4: Gievn a number 'n', find the nth elements of the fibonacci sequence using recursion.
 const recursiveFibonacci = (n) => {
     if(n < 2) {
         return n;
@@ -92,8 +93,11 @@ const recursiveFibonacci = (n) => {
 
 console.log(recursiveFibonacci(6)); // output - 8 // Big-O = O(2^n)
 
+// Problem 2: Gievn an integer 'n', find the factorial of that integer using recursion.
 const recursiveFactorial = (n) => {
-    
+    if(n < 0){
+        return `Required non-negative integer to get factorial`
+    }
     if(n === 0) {
         return 1;
     }
