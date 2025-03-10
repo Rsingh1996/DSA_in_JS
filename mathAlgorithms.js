@@ -28,7 +28,7 @@ const factorial = (n) => {
 }
 console.log(factorial(5)); // output = 120 // Big-O = O(n)
 
-// Problem 3: Gievn an natural number 'n', determine if the number is prime of not.
+// Problem 3: Gievn an natural number 'n', determine if the number is prime or not.
 const isPrime = (n) => {
     if(n <2 ){
         return false;
