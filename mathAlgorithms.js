@@ -60,7 +60,7 @@ console.log(isPrimeOptimized(47)); // output = true // Big-O = O(sqrt(n))
 // Problem 4: Gievn a positive integer 'n', determine if the number is power of 2 or not.
 
 const isPowerOfTwo = (n) => {
-    if (n < 1) {
+    if (n < 2) {
         return false;
     }
     while (n > 1) {
@@ -75,7 +75,7 @@ console.log(isPowerOfTwo(9)); // output = false // Big-O = O(logn)
 console.log(isPowerOfTwo(16)); // output = true // Big-O = O(logn)
 
 const isPowerOfTwoBitWise = (n) => {
-    if (n < 1) {
+    if (n < 2) {
         return false;
     }
     return (n & (n-1)) === 0;
