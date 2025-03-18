@@ -41,3 +41,27 @@ const insertionSort = (arr) => {
 
 const arr = [-6, 20, 8, -2, 4];
 console.log(insertionSort(arr)); // Output: [-6, -2, 4, 8, 20] Big-O = O(n^2)
+
+// Quick Sort
+// Problem - Given an array of integers, sort the array.
+// const arr = [-6, 20, 8, -2, 4] Should return -> [-6, -2, 4, 8, 20]
+const quickSort = (arr) => {
+    if(arr.length < 2){
+        return arr;
+    }
+    let pivotElement = arr[arr.length - 1];
+    let leftArr = [];
+    let rightArr =[];
+    for(let i = 0; i < arr.length-1; i++ ){
+        if(arr[i] < pivotElement){
+            leftArr.push(arr[i]);
+        } else if(arr[i]>= pivotElement){
+            rightArr.push(arr[i]);
+        }
+    }
+    return [...quickSort(leftArr), pivotElement,  ...quickSort(rightArr)]
+        
+}
+
+const arr = [-6, 20, 8, -2, 4];
+console.log(quickSort(arr)); // Output: [-6, -2, 4, 8, 20] Big-O = O(n^2)
