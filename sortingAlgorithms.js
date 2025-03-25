@@ -1,5 +1,5 @@
 // Bubble Sort
-// Problem - Given an array of integers, sort the array.
+// Problem 1 - Given an array of integers, sort the array.
 // const arr = [-6, 20, 8, -2, 4] Should return -> [-6, -2, 4, 8, 20]
 
 const bubbleSort = (arr) => {
@@ -22,7 +22,7 @@ const arr = [-6, 20, 8, -2, 4];
 console.log(bubbleSort(arr)); // Output: [-6, -2, 4, 8, 20] Big-O = O(n^2)
 
 // Insertion Sort
-// Problem - Given an array of integers, sort the array.
+// Problem 2 - Given an array of integers, sort the array.
 // const arr = [-6, 20, 8, -2, 4] Should return -> [-6, -2, 4, 8, 20]
 // [-6, 20, 20, 8, 4
 const insertionSort = (arr) => {
@@ -43,7 +43,7 @@ const arr = [-6, 20, 8, -2, 4];
 console.log(insertionSort(arr)); // Output: [-6, -2, 4, 8, 20] Big-O = O(n^2)
 
 // Quick Sort
-// Problem - Given an array of integers, sort the array.
+// Problem 3 - Given an array of integers, sort the array.
 // const arr = [-6, 20, 8, -2, 4] Should return -> [-6, -2, 4, 8, 20]
 const quickSort = (arr) => {
     if(arr.length < 2){
@@ -67,7 +67,7 @@ const arr = [-6, 20, 8, -2, 4];
 console.log(quickSort(arr)); // Output: [-6, -2, 4, 8, 20] Big-O = O(n^2)
 
 // Merge Sort
-// Problem - Given an array of integers, sort the array.
+// Problem 4 - Given an array of integers, sort the array.
 // const arr = [-9, 15, 10, -3, 7] Should return -> [-9, -3, 7, 10, 15]
 const mergeSort = (arr) => {
     if (arr.length < 2) {
