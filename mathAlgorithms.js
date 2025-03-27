@@ -104,3 +104,17 @@ const recursiveFactorial = (n) => {
     return n*recursiveFactorial(n-1);
 }
 console.log(recursiveFactorial(4)); // output - 24 // Big-O = O(n)
+
+const gcd = (a, b) =>{
+    
+    while(b !== 0){
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a
+}
+
+console.log(gcd(48, 18)); // Output: 6 Big - O = O(log(min(a, b)))
+console.log(gcd(56, 98)); // Output: 14  Big - O = O(log(min(a, b)))
+console.log(gcd(101, 103)); // Output: 1  Big - O = O(log(min(a, b)))
