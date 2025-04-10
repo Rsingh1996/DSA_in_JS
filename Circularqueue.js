@@ -90,3 +90,13 @@ queue.printQueue(); // output - 20 30 40 50
 console.log(queue.peek()); // output - 20
 queue.enqueue(60);
 queue.printQueue(); // output - 20 30 40 50 60
+
+/* 
+Time Complexities (Big-O Notation):
+enqueue: O(1) - Adding an element to the rear of the queue is a constant-time operation.
+dequeue: O(1) - Removing an element from the front of the queue is a constant-time operation.
+peek: O(1) - Accessing the front element of the queue is a constant-time operation.
+isFull: O(1) - Checking if the queue is full is a constant-time operation.
+isEmpty: O(1) - Checking if the queue is empty is a constant-time operation.
+printQueue: O(n) - Printing all elements in the queue takes linear time relative to the number of elements.
+*/
