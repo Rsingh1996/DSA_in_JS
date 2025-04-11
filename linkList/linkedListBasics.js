@@ -137,3 +137,16 @@ list.delete(10); // first node
 list.print(); // output 20~>30~>40~>
 list.delete(40); // last node
 list.print(); // output 10~>20~>30~>
+
+/*
+Time Complexity - Big-O
+Append: O(n)
+Insert at Beginning: O(1)
+Insert at a Specific Position: O(n)
+Delete (by value): O(n)
+Delete at Beginning: O(1)
+Delete at End: O(n)
+Search: O(n)
+Traversal (print all elements): O(n)
+Count Nodes: O(n)
+*/
