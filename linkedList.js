@@ -48,7 +48,23 @@ class LinkedList {
         }
         this.size++;
     }
-    
+    insert(value, index){
+        if(index < 0 || index > this.size){
+            return console.log('invalid index');
+        } 
+        if(index === 0){
+            this.prepend(value);
+        }else {
+            const node = new Node(value);
+            let prev = this.head;
+            for(let i = 0; i < index -1; i++){
+                prev = prev.next;
+            }
+            node.next = prev.next;
+            prev.next = node;
+            this.size++;
+        }
+    }
     print(){
         if(this.isEmpty()){
             console.log(`List is Empty`);
@@ -67,14 +83,18 @@ class LinkedList {
 const list = new LinkedList();
 console.log('List is ? : ',list.isEmpty()); // List is ? :  true
 console.log('List Size : ',list.getSize()); // List Size :  0
-list.prepend(10)
-list.print(); // 10
-list.prepend(20)
-list.prepend(30)
+list.prepend(10) // Big-0 = O(1)
+list.print(); // 10 // Big-0 = O(n)
+list.prepend(20)// Big-0 = O(1)
+list.prepend(30)// Big-0 = O(1)
 console.log('List is ? : ',list.isEmpty()); // List is ? :  false
 console.log('List Size : ',list.getSize()); // List Size :  3
-list.print(); // 30 20 10 
-list.append(40);
-list.append(50);
-list.append(60);
-list.print(); // 30 20 10 40 50 60 
+list.print(); // 30 20 10 // Big-0 = O(n)
+list.append(40);// Big-0 = O(n)
+list.append(50);// Big-0 = O(n)
+list.append(60);// Big-0 = O(n)
+list.print(); // 30 20 10 40 50 60  // Big-0 = O(n)
+list.insert(70, 2);
+list.insert(100,4);
+list.print(); // 30 20 70 10 100 40 50 60 
+
