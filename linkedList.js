@@ -65,6 +65,30 @@ class LinkedList {
             this.size++;
         }
     }
+    
+    removeFrom(index){
+        if(index < 0 || index >= this.size){
+            
+            return `Invalid index`;
+        }
+        let removedNode;
+        if(index === 0){
+            removedNode = this.head;
+            this.head = this.head.next;
+        }else{
+            let prev = this.head;
+            for(let i = 0; i < index -1; i++){
+                prev = prev.next;
+            }
+            removedNode = prev.next;
+            prev.next = removedNode.next;
+            return removedNode.value;
+        }
+        
+        this.size--;
+        return removedNode.value;
+    }
+    
     print(){
         if(this.isEmpty()){
             console.log(`List is Empty`);
@@ -97,4 +121,6 @@ list.print(); // 30 20 10 40 50 60  // Big-0 = O(n)
 list.insert(70, 2);
 list.insert(100,4);
 list.print(); // 30 20 70 10 100 40 50 60 
-
+console.log(list.removeFrom(-9)); // Invalid index
+console.log(list.removeFrom(4)); // 100 // Big-0 = O(n)
+list.print();// 30 20 70 10 40 50 60 / Big-0 = O(n)
