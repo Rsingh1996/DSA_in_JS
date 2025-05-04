@@ -110,6 +110,21 @@ class LinkedList {
       return null;
     }
   }
+  search(value) {
+    if (this.isEmpty()) {
+      return `List is Empty`;
+    }
+    let i = 0;
+    let current = this.head;
+    while (current) {
+      if (current.value === value) {
+        return `${value} is found at index ${i}`;
+      }
+      current = current.next;
+      i++;
+    }
+    return -1;
+  }
 
   print() {
     if (this.isEmpty()) {
