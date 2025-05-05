@@ -125,7 +125,17 @@ class LinkedList {
     }
     return -1;
   }
-
+    reverse(){
+        let prev = null;
+        let current = this.head;
+        while(current){
+            let next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+        }
+        this.head = prev;
+    }
   print() {
     if (this.isEmpty()) {
       console.log(`List is Empty`);
@@ -163,3 +173,5 @@ console.log(list.removeFrom(4)); // 100 // Big-0 = O(n)
 list.print(); // 30 20 70 10 40 50 60 / Big-0 = O(n)
 console.log(list.removeValue(50)); // 50 is removed from list
 list.print(); // 30 20 70 10 40 60 / Big-0 = O(n)
+list.reverse(); // Big-0 = O(n)
+list.print(); // 60 40 10 70 20 30 / Big-0 = O(n)
