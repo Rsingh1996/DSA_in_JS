@@ -1,0 +1,67 @@
+/*
+Tree -
+A tree is a hierachical data structure that consists of nodes connected by edges.
+A trre is a non-linear data structure, compared to arrays, linked list, stacks and queue which are linear data structure.
+In linear data structure, the time required to search is propotional to the size of the data set.
+Trees however, owing to the nonlinear nature allow quicker and easier access to the data.
+A tree will not contain any loops or cycles.
+
+Usage -
+File system for directory structure
+A family tree
+An Organisation tree
+DOM
+Chat bots
+Abstracted syntax tree
+
+Tree Terminology
+1. Node
+A basic unit of a tree. It contains data and links (edges) to other nodes.
+
+2. Root Node
+The topmost node in the tree. It has no parent.
+
+Example: In a file system, the main directory (like C:/ or /) is the root.
+
+3. Parent Node
+A parent node is a node that has one or more child nodes or A parent node is the immediate predecessor of a child node.
+
+4. Child Node
+A node that is directly connected and below another node (its parent).
+
+5. Sibling Nodes
+Nodes that share the same parent.
+
+6. Leaf Node
+A node that has no children.
+
+7. Internal Node
+Any node that is not a leaf, i.e., it has at least one child.
+
+8. Ancestor Node
+Any node on the path from the root to a given node, including the root and parent.
+
+9. Descendant Node
+Any node that lies below a given node (children, grandchildren, etc.).
+
+10. Subtree
+A portion of a tree starting at a given node (includes the node and all its descendants).
+
+11. Depth
+The number of edges from the root to the node.
+
+12. Height
+The number of edges on the longest path from the node to a leaf.
+
+13. Path:
+A sequence of connected nodes.
+➤ Example: A → B → C
+
+14. Distance:
+The number of edges between two nodes.
+➤ Example: A to C = 2 edges
+
+15. Degree:
+The number of children a node has.
+➤ Example: A node with 2 children → degree = 2
+*/
