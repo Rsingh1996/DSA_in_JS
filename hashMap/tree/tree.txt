@@ -64,4 +64,15 @@ The number of edges between two nodes.
 15. Degree:
 The number of children a node has.
 ➤ Example: A node with 2 children → degree = 2
+
+Binary Tree
+A binary tree is a tree data structure in which each node has at most two children.
+They are reffered to as left child and right child.
+
+Binary Search Tree - which has following two properties
+1. The value of each left node must be smaller then the parent node.
+2. The value of each right node must be greater than the parent node.
+Each node has at most two children.
+
+
 */
