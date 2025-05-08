@@ -74,5 +74,15 @@ Binary Search Tree - which has following two properties
 2. The value of each right node must be greater than the parent node.
 Each node has at most two children.
 
+Operation -
+Insertion - To add a node to the tree
+Search - To find a node given its value
+DFS & BFS - To visit all nodes in the tree
+Deletion - To remove a node given its value
+
+Usage - 
+Searching 
+Sorting 
+To implement abstract data types such as lookup tables and priority queues.
 
 */
