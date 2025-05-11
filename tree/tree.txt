@@ -77,8 +77,41 @@ Each node has at most two children.
 Operation -
 Insertion - To add a node to the tree
 Search - To find a node given its value
-DFS & BFS - To visit all nodes in the tree
 Deletion - To remove a node given its value
+Tree Traversal - Visiting every node in the tree.
+DFS & BFS - To visit all nodes in the tree
+
+DFS - The DFS algorithm starts at the root node and explores as far as possible along each branch before backtracking.
+Visit the root node, visit all the nodes in the left subtree and visit all the nodes in the right subtree.
+Depending on the order in which we do this, there can be three types of DFS traversals.
+a. Preorder
+b. Inorder
+c. Postorder
+
+a. Preorder Traversal -
+1. Read the data of the node
+2. Visit the left subtree
+3. Visit the right subtree
+
+b. Inorder Traversal -
+1. Visit the left subtree
+2. Read the data of the node 
+3. Visit the right subtree
+
+c. Inorder Traversal -
+1. Visit the left subtree
+2. Visit the right subtree
+3. Read the data of the node 
+
+BFS - Explore all nodes at the present depth prior to moving on to the nodes at the next depth level.
+BFS Traversal Approach
+1. create a queue
+2. Enqueue the root node
+3. As long as a node exists in the queue
+  a. Dequeue the node from the front
+  b. Read the node's value
+  c. Enqueue the node's left child if the exits 
+  d. Enqueue the node's right child if it exits 
 
 Usage - 
 Searching 
