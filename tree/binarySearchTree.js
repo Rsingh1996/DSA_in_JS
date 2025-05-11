@@ -74,6 +74,21 @@ class BinarySearchTree {
       console.log(root.value);
     }
   }
+
+  levelOrder() {
+    const queue = [];
+    queue.push(this.root);
+    while (queue.length) {
+      let current = queue.shift();
+      console.log(current.value);
+      if (current.left) {
+        queue.push(current.left);
+      }
+      if (current.right) {
+        queue.push(current.right);
+      }
+    }
+  }
 }
 
 const bst = new BinarySearchTree();
@@ -93,3 +108,5 @@ console.log(`Inorder Traversal :`);
 bst.inOrder(bst.root);
 console.log(`Postorder Traversal :`);
 bst.postOrder(bst.root);
+console.log(`levelOrder Traversal :`);
+bst.levelOrder();
