@@ -113,6 +113,8 @@ BFS Traversal Approach
   c. Enqueue the node's left child if the exits 
   d. Enqueue the node's right child if it exits 
 
+Min node - The left most leaf node is the smallest value in the tree.
+Max node - The right most leaf node is the largest value in the tree.
 Usage - 
 Searching 
 Sorting 
