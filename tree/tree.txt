@@ -115,6 +115,15 @@ BFS Traversal Approach
 
 Min node - The left most leaf node is the smallest value in the tree.
 Max node - The right most leaf node is the largest value in the tree.
+
+ Remove Node - 
+1. No children - remove the leaf node
+2. One child - remove the node and replace with it's child
+3. Two child node 
+   - copy the value of inorder successor to the node and delete the inorder succesor 
+   - inorder successor of a node in BST is next node in inorder traversals sequence
+   - in a BST, the inorder succesor is a node with least value in its right subtree
+
 Usage - 
 Searching 
 Sorting 
