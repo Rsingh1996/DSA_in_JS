@@ -1,0 +1,17 @@
+Graph 
+- A graph is a non-linear data structure that consists of a finite number of vertices(also called nodes) connected by edges.
+- Trees are specific type of graph data structure.
+
+Type of Graph
+- Directed : A graph in which the edges have direction.
+Edges are usually represnted by arrows pointing in the direction the graph can be traversed.
+A---->B---->C
+- Undirected : A graph in which the edges are bidirectional.
+The graph can be traversed in either direction.
+The absence of an arrow tells us that the graph is undirected.
+A----B----C
+C----B----A
+
+Usage -
+Google maps 
+Social media sites(FB, Insta)
