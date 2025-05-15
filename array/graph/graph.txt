@@ -15,3 +15,18 @@ C----B----A
 Usage -
 Google maps 
 Social media sites(FB, Insta)
+
+Represntation -
+1. Adjacency matrix 
+- An adjacency matrix is a 2D array of size V x V where V is the number of vertices in the graph.
+- Each row and column represnt a vertex
+- If the value of any element say, matrix[i][j] is 1, it represnts that there is an edge connecting vertex i and vertex j.
+A----B----C
+  A    B    C
+ ------------
+A|0    1    0
+B|1    0    1
+C|0    1    0
+
+2. Adjacency list
+
